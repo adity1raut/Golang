@@ -2,28 +2,21 @@ package main
 
 import "fmt"
 
-
 func main () {
-
-	num := add(10 ,20)
-	fmt.Println("Sum of 10 and 20 is : ", num)
-
-	fact := Factorial(64)
-	fmt.Println("Factorial of 5 is : ", fact)
-}
-
-
-func Factorial (n int) int {
-	if n == 0 ||  n == 1 {
-		// Factorial of 0 and 1 is 1	
-		return 1
+	// Function to add two integers
+	add := func(a int, b int) int {
+		return a + b
 	}
-	return n * Factorial(n-1)
-}
 
-//Bhai return karnese pahale hame wahape type bhi mension karna padta hai jaise ki baki language me karte hai isliy to used karte hai functions 
+	// Function to multiply two integers
+	multiply := func(a int, b int) int {
+		return a * b
+	}
 
+	// Using the functions
+	sum := add(5, 3)
+	product := multiply(4, 6)
 
-func add (a int, b int) int {
-	return a + b
+	fmt.Println("Sum:", sum)          // Output: Sum: 8
+	fmt.Println("Product:", product)  // Output: Product: 24
 }
