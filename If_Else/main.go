@@ -4,16 +4,24 @@ import "fmt"
 
 
 func main () {
-	var num int = 71
 
-	if num % 2 == 0 {
-		fmt.Println("Number is Even")
-	} else {
-		println("Number is Odd")
-	}
+	var num1 , num2 int 
+
+	fmt.Print("Enter a First Number : ")
+	fmt.Scan(&num1)
+	 
+	fmt.Print("Enter a Secound Number : ")
+	fmt.Scan(&num2)
+
+	Swap( &num1 ,&num2)
 	
-	for i := 0; i < num ; i++ {
-		fmt.Print("Hellow Aditya Waman Raut ! \n")
-	}
+	println("Number 1 :" , num1)
+	println("Number 2 :" , num2)
 
+}
+
+func Swap (num1 *int , num2 *int) {
+	temp := *num1
+	*num1 = *num2
+	*num2 = temp
 }

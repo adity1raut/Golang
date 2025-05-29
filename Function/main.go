@@ -1,22 +1,31 @@
-package main 
+package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main () {
-	// Function to add two integers
-	add := func(a int, b int) int {
-		return a + b
+	fmt.Println("Hellow Aditya Welcome To Golang!")
+
+	var num int 
+	fmt.Println("Enter Your Age !")
+	fmt.Scan(&num)
+
+	result := Voting(num)
+
+	if result {
+		fmt.Println("You Can Vote ")
+	}else {
+		fmt.Println("You Not Eligible For Voting !")
 	}
 
-	// Function to multiply two integers
-	multiply := func(a int, b int) int {
-		return a * b
+
+}
+
+func Voting (age int ) bool {
+	if age > 18 {
+		return true
+	}else {
+		return false
 	}
-
-	// Using the functions
-	sum := add(5, 3)
-	product := multiply(4, 6)
-
-	fmt.Println("Sum:", sum)          // Output: Sum: 8
-	fmt.Println("Product:", product)  // Output: Product: 24
 }
