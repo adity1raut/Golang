@@ -1,35 +1,18 @@
-package main
+
+
+package main 
 
 import "fmt"
 
-// Define a custom array type
-type IntArray [5]int
+func main () {
+    slice := make([]int, 3, 5) // Length=3, Capacity=5
+    fmt.Println(slice)         // Output: [0 0 0]
+    fmt.Println(len(slice))    // Output: 3
+    fmt.Println(cap(slice))    // Output: 5
 
-// Method to calculate the sum of elements
-func (arr IntArray) Sum() int {
-    total := 0
-    for _, v := range arr {
-        total += v
-    }
-    return total
-}
-
-// Method to find the maximum element
-func (arr IntArray) Max() int {
-    max := arr[0] // Assume first element is max
-    for _, v := range arr {
-        if v > max {
-            max = v
-        }
-    }
-    return max
-}
-
-func main() {
-    // Create an instance of the custom array
-    numbers := IntArray{1, 2, 3, 4, 5}
-
-    // Call methods
-    fmt.Println("Sum:", numbers.Sum()) // Output: Sum: 15
-    fmt.Println("Max:", numbers.Max()) // Output: Max: 5
+    c := make([]int , len(slice))
+    copy(c , slice)
+    
+    c = append(c,4 , 5 , 8 , 9 , 7 , 40 ,14 , 45 )
+    println(c)
 }
