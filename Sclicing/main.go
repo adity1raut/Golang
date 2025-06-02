@@ -2,27 +2,21 @@ package main
 
 import "fmt"
 
-func main() {
+func main () {
+   nums := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
-	var nums []int = []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-	fmt.Println(nums)      // Output: [1 2 3 4 5 6 7 8 9]
-	fmt.Println(len(nums)) // Output: 9
-	fmt.Println(cap(nums)) // Output: 9
+   slice := make([]int,len(nums)) // Create a slice with a capacity of 5
 
-	slice := make([]int, 3, 5) // Length=3, Capacity=5
-	fmt.Println(slice)         // Output: [0 0 0]
-	fmt.Println(len(slice))    // Output: 3
-	fmt.Println(cap(slice))    // Output: 5
-	slice[0] = 49
-	slice[1] = 56
-	slice[2] = 789
-	fmt.Println(slice) // Output: [49 56 789]
+   copy(slice, nums[0:]) // Copy the first 5 elements from nums to slice
+   fmt.Println("First Slicing " ,slice)
 
-	c := make([]int, len(nums))
-	copy(c, nums)  // Direactally copy karega re bhai tu kuch bhi karle bhai hoga apne app
+   slice = append(slice, 11, 12, 13) // Append elements to the slice
+   fmt.Println("Secound Slicing" ,slice)
 
-	fmt.Println(c)
-	c = append(c, slice...) // Appending the slice to c (Yanike Add Honge re Bhai Size tu kucha bhi declare kar le vo extra ke hi add honge Mera yasu yasu!)
-	fmt.Println(c)
+   slice = append(slice, 14, 15) // Append more elements to the slice
+   fmt.Println("Third Slicing" ,slice)
 
+   slice = append(slice, 16, 17, 18, 19, 20) // Append even more elements
+   fmt.Println("Final Slicing" ,slice)
+  
 }
