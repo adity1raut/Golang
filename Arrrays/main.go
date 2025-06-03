@@ -1,18 +1,26 @@
 
-
-package main 
+package main
 
 import "fmt"
 
 func main () {
-    slice := make([]int, 3, 5) // Length=3, Capacity=5
-    fmt.Println(slice)         // Output: [0 0 0]
-    fmt.Println(len(slice))    // Output: 3
-    fmt.Println(cap(slice))    // Output: 5
+    // Finding Greatest Number of and Array in go lang
 
-    c := make([]int , len(slice))
-    copy(c , slice)
-    
-    c = append(c,4 , 5 , 8 , 9 , 7 , 40 ,14 , 45 )
-    println(c)
+    arr := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+    max := arr[0] // Assume the first element is the largest
+    for _, num := range arr {
+        if num > max {
+            max = num // Update max if a larger number is found
+        }
+    }
+    fmt.Println("The largest number in the array is:", max)
+    // Finding Smallest Number of and Array in go lang
+    min := arr[0] // Assume the first element is the smallest
+    for _, num := range arr {
+        if num < min {
+            min = num // Update min if a smaller number is found
+        }
+    }
+    fmt.Println("The smallest number in the array is:", min)
 }

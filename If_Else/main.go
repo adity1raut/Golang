@@ -1,27 +1,20 @@
-package main
+
+
+package main 
 
 import "fmt"
 
+func main() {
+	var age int 
 
-func main () {
+	fmt.Println("Checking if a user can vote or not!")
+	fmt.Print("Enter your age: ")
+	fmt.Scan(&age)
 
-	var num1 , num2 int 
+	if age >= 18 {
+		fmt.Println("You are eligible to vote.")
+	} else {
+		fmt.Println("You are not eligible to Aapkii vote.")
+	}
 
-	fmt.Print("Enter a First Number : ")
-	fmt.Scan(&num1)
-	 
-	fmt.Print("Enter a Secound Number : ")
-	fmt.Scan(&num2)
-
-	Swap( &num1 ,&num2)
-	
-	println("Number 1 :" , num1)
-	println("Number 2 :" , num2)
-
-}
-
-func Swap (num1 *int , num2 *int) {
-	temp := *num1
-	*num1 = *num2
-	*num2 = temp
 }

@@ -1,31 +1,23 @@
-package main
 
-import (
-	"fmt"
-)
 
-func main () {
-	fmt.Println("Hellow Aditya Welcome To Golang!")
+package main 
 
-	var num int 
-	fmt.Println("Enter Your Age !")
-	fmt.Scan(&num)
+import "fmt"
 
-	result := Voting(num)
-
-	if result {
-		fmt.Println("You Can Vote ")
-	}else {
-		fmt.Println("You Not Eligible For Voting !")
+func isVoted(age int) {
+	if age >= 18 {
+		fmt.Println("You are eligible to vote.")
+	} else {
+		fmt.Println("You are not eligible to vote.")
 	}
-
-
 }
 
-func Voting (age int ) bool {
-	if age > 18 {
-		return true
-	}else {
-		return false
-	}
+func main( )  {
+
+	fmt.Println("Chacking a user Can get Vote or Not !")
+	var age int
+	fmt.Print("Enter your age: ")
+	fmt.Scan(&age)
+	
+	isVoted(age)
 }
