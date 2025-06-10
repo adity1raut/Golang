@@ -72,6 +72,3 @@ Controls the rate of task execution or requests, preventing overwhelming resourc
 
 Manages task execution order and timing, deciding when and how goroutines run to optimize resource usage and meet timing requirements.
 
----
-
-If you want me to dive deeper or explain how to implement any pattern in Go, just ask!

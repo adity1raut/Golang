@@ -183,4 +183,3 @@ func main() {
 3. **Use Case**: Ye patterns scalable systems mein use hote hain, jaise data processing pipelines, distributed systems, ya microservices.
 4. **Go mein**: Channels aur goroutines in patterns ko implement karne ka sabse common tareeka hain.
 
-Bhai, ab samajh aaya? Agar koi specific part mein doubt hai ya aur detail chahiye, bol de! 😎
