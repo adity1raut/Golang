@@ -1,13 +1,20 @@
+# Array Basics in Go
+
+This program demonstrates different ways of working with arrays in Go, including initialization, accessing, modifying, and iterating.
+
+## Code
+
+```go
 package main
 
 import "fmt"
 
-func main () {
-    // Zero value array (nil, cannot be used directly)
+func main() {
+    // Zero value array (default values are 0)
     var arr1 [5]int
     fmt.Println(arr1)
 
-    // Initialized empty array (ready to use)
+    // Initialized empty array (explicit zeros)
     arr2 := [5]int{0, 0, 0, 0, 0}
     fmt.Println(arr2)
 
@@ -30,6 +37,8 @@ func main () {
         fmt.Printf("Index %d: Value %d\n", i, v)
     }
 
-    // In The Topic of itterration in an Arrays the i : is define the inex of and Arrays and v : is define the value of an Arrays
-    
+    // Note:
+    // In iteration using range:
+    // i → represents the index
+    // v → represents the value at that index
 }

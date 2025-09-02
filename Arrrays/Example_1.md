@@ -1,3 +1,13 @@
+# Array Operations in Go
+
+This program demonstrates basic array operations in Go:
+- Accepting array size and elements from the user
+- Searching for an element in the array
+- Printing all elements of the array
+
+## Code
+
+```go
 package main
 
 import "fmt"
@@ -18,10 +28,7 @@ func printArray(arr []int) {
 	fmt.Println()
 }
 
-// main function to demonstrate array operations
-
 func main() {
-
 	fmt.Print("Enter the size of the array: ")
 	var size int
 	fmt.Scan(&size)
@@ -32,15 +39,16 @@ func main() {
 		fmt.Scan(&arr[i])
 	}
 
-	fmt.Print("Search The Elemetn in an Arrays :")
+	fmt.Print("Search The Element in an Array: ")
 	var element int
 	fmt.Scan(&element)
+
 	if searchElement(arr, element) {
 		fmt.Println("Element found in the array.")
 	} else {
 		fmt.Println("Element not found in the array.")
 	}
 
-    fmt.Println("Elements of the array:")
+	fmt.Println("Elements of the array:")
 	printArray(arr)
 }
