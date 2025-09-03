@@ -1,5 +1,17 @@
+# Go Program: Multiple Checks (Even/Odd, Prime, Positive/Negative, Leap Year, Palindrome)
 
+This Go program performs multiple checks on numbers and strings:  
+- Even or Odd  
+- Prime Number  
+- Positive, Negative, or Zero  
+- Leap Year  
+- Palindrome String  
 
+---
+
+## 📌 Code
+
+```go
 package main 
 
 import "fmt"
@@ -43,6 +55,7 @@ func isLeapYear(year int) {
 		fmt.Println("The year is not a leap year.")
 	}
 }
+
 func isPalindrome(s string) {
 	left, right := 0, len(s)-1
 	for left < right {
@@ -55,8 +68,6 @@ func isPalindrome(s string) {
 	}
 	fmt.Println("The string is a palindrome.")
 }
-
-
 
 func main(){
 	fmt.Println("Checking if a number is even or odd:")
@@ -86,9 +97,8 @@ func main(){
 	fmt.Print("Enter a string: ")
 	fmt.Scan(&str)
 	isPalindrome(str)
+
 	fmt.Println("\nAll checks completed successfully!")
 	fmt.Println("Thank you for using the program!")
 	fmt.Println("Have a great day!")
-
-
 }

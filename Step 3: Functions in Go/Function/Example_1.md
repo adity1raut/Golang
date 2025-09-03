@@ -1,22 +1,19 @@
 
-
+```go
 package main 
 
-
 func add(n int) int {
-
 	if n == 0 {
 		return 0
 	}
-	return n + add(n -1)
+	return n + add(n-1)
 }
 
 func Factorial(n int) int {
-
 	if n == 0 {
 		return 1
 	}
-	return n * Factorial(n - 1)
+	return n * Factorial(n-1)
 }
 
 func Fibonacci(n int) int {
@@ -27,8 +24,7 @@ func Fibonacci(n int) int {
 }
 
 func main() {
-
-	/// this function can explain a recursion probles in a golang
+	// Demonstrating recursion problems in Go
 
 	r := add(8)
 	println("Sum of first 8 numbers is:", r)
