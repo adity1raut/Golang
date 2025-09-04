@@ -14,6 +14,7 @@ func main(){
 	var s2 string = "World"
 
     ss := strings.Compare(s,s2)
+	print(strings.Contains(s , s2))
 	if ss == 0 {
 		fmt.Println("Strings are equal !")
 	} else if ss < 0 {

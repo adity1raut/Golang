@@ -1,8 +1,12 @@
+# Go Built-in Printing Functions (fmt Package)
 
+This example demonstrates how to use Go's built-in functions from the **`fmt`** package to print values in different ways.
 
-//Getting  a Normals Examples in a Go inbuild Functions using "fmt" package
+## Example Code
 
+```go
 package main
+
 import "fmt"
 
 func main() {
