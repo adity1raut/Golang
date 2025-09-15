@@ -23,4 +23,9 @@ func main () {
         }
     }
     fmt.Println("The smallest number in the array is:", min)
-}
+}   
+
+// for _, num := range arr
+// range arr goes through each element in the slice arr.
+// _ ignores the index of the element (we don’t need it here).
+// num is the current element of the array in each iteration.
